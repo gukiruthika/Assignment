@@ -18,18 +18,19 @@ public class PascalTriangle {
 		scan.close();
 		System.out.println(generate(number));
 	}
+
 	public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> pascal = new ArrayList<>();
+		List<List<Integer>> pascal = new ArrayList<>();
 		for (int line = 1; line <= numRows; line++) {
-            List<Integer> row = new ArrayList<>();
+			List<Integer> row = new ArrayList<>();
 			int number = 1;
 			for (int i = 1; i <= line; i++) {
 				row.add(number);
 				number = number * (line - i) / i;
 			}
-            pascal.add(row);
+			pascal.add(row);
 		}
-        return pascal;
-    }
+		return pascal;
+	}
 
 }
