@@ -1,8 +1,7 @@
 package Group1;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class SingleAppearance {
 
@@ -16,19 +15,19 @@ public class SingleAppearance {
 		System.out.println("Enter number of elements");
 		int n = scan.nextInt();
 		int element;
-		List<Integer> list = new LinkedList<>();
+		Stack<Integer> list = new Stack<>();
 		System.out.println("Enter elements");
 		while (n-- > 0) {
 			element = scan.nextInt();
 			if (list.contains(element)) {
-				list.remove((Integer) element);
+				list.pop();
 			} else {
 				list.add(element);
 			}
 		}
 		scan.close();
 
-		System.out.println(list.get(0));
+		System.out.println(list.pop());
 	}
 
 }
