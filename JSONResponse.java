@@ -10,13 +10,12 @@ import java.net.URL;
 public class JSONResponse {
 
 	public static void main(String[] args) {
-		JSONResponse task = new JSONResponse();
-		task.getJSONResponse();
+		new JSONResponse().getJSONResponse();
 	}
 
 	private void getJSONResponse() {
 		try {
-			URL url = new URL("https://web.arattai.in/");
+			URL url = new URL("https://reqres.in/api/unknown");
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			String response;
